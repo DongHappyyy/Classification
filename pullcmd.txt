@@ -1,0 +1,1 @@
+git pull remote_name remote_branch_name:local_branch_name
