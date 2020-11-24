@@ -5,7 +5,7 @@
 #  @File:   train.py
 """
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from model import resnet50
+from model import denseNet121
 import tensorflow as tf
 import json
 import os
@@ -18,12 +18,12 @@ im_width = 224
 
 data_path = os.path.join(os.getcwd(), "../../")
 classical_path = "./class_indices.json"
-checkpoint_save_path = os.path.join(data_path, "CheckPoint/ResNet/ResNet.ckpt")
+checkpoint_save_path = os.path.join(data_path, "CheckPoint/DenseNet/DenseNet.ckpt")
 test_data_path = os.path.join(data_path, "DataSet/flower_data/testdata")
 train_dir = os.path.join(data_path, "DataSet/flower_data/train")
 validation_dir = os.path.join(data_path, "DataSet/flower_data/val")
 
-print("\n=============================这里是 ResNet ===========================\n")
+print("\n=============================这里是 DenseNet ===========================\n")
 
 train_image_generator = ImageDataGenerator(horizontal_flip=True)
 train_data_gen = train_image_generator.flow_from_directory(directory=train_dir, batch_size=3306, shuffle=True,
@@ -49,9 +49,9 @@ validation_x, validation_y = next(val_data_gen)
 print("=============================数据加载完毕===========================\n")
 
 print("=============================模型加载中===========================")
-model = resnet50(num_classes=5, include_top=True)
-model.build((None, 224, 224, 3))
-model.summary()
+model = denseNet121(class_num=5)
+# model.build((None, 224, 224, 3))
+# model.summary()
 # model.build(input_shape) # `input_shape` is the shape of the input data, e.g. input_shape = (None, 32, 32, 3)
 model.compile(
     optimizer=tf.keras.optimizers.SGD(learning_rate=0.0001),
@@ -60,7 +60,7 @@ model.compile(
 print("=============================模型加载完毕===========================\n")
 
 print("=============================模型训练中===========================")
-logdir = "logs/fit/2020-11-23" # + datetime.now().strftime("%Y%m%d-%H%M%S")
+logdir = "logs/fit/2020-11-24"
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
 cp_callback = tf.keras.callbacks.ModelCheckpoint(
     filepath=checkpoint_save_path,
@@ -69,7 +69,7 @@ cp_callback = tf.keras.callbacks.ModelCheckpoint(
 model.fit(
     train_x, train_y,
     batch_size=32,
-    epochs=1000,
+    epochs=300,
     validation_data=(validation_x, validation_y),
     callbacks=[cp_callback, tensorboard_callback])
 model.summary()

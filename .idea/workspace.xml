@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e42780a2-96f6-4112-b057-1e8de1f5e619" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="4fee5931-d449-47dd-b6c5-96e4159704d1" />
+  <component name="ProjectId" id="1kb9bbahgLuTtY6jI4Kkuy68OP9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DenseNet" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Documents\PythonProject\DeepLearningFrame\Classification\DenseNet" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.train">
+    <configuration name="train (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Classification" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MobileNet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MobileNet/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Classification" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ResNet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ResNet/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Classification" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DenseNet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DenseNet/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.train" />
+        <item itemvalue="Python.train (2)" />
+        <item itemvalue="Python.train (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e42780a2-96f6-4112-b057-1e8de1f5e619" name="Default Changelist" comment="" />
+      <created>1605958497294</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605958497294</updated>
+      <workItem from="1605958499316" duration="14626000" />
+      <workItem from="1606120056306" duration="16371000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1334" y="220" key="#Inspections" timestamp="1606123051052">
+      <screen x="-1920" y="2" width="1920" height="1080" />
+    </state>
+    <state x="-1334" y="220" key="#Inspections/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606123051052" />
+    <state x="-1340" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606134869400">
+      <screen x="-1920" y="2" width="1920" height="1080" />
+    </state>
+    <state x="-1340" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606134869400" />
+    <state width="1120" height="714" key="GridCell.Tab.0.bottom" timestamp="1606180925558">
+      <screen x="-1920" y="2" width="1920" height="1080" />
+    </state>
+    <state width="1120" height="714" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606180925558" />
+    <state width="1120" height="714" key="GridCell.Tab.0.center" timestamp="1606180925558">
+      <screen x="-1920" y="2" width="1920" height="1080" />
+    </state>
+    <state width="1120" height="714" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606180925558" />
+    <state width="1120" height="714" key="GridCell.Tab.0.left" timestamp="1606180925558">
+      <screen x="-1920" y="2" width="1920" height="1080" />
+    </state>
+    <state width="1120" height="714" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606180925558" />
+    <state width="1120" height="714" key="GridCell.Tab.0.right" timestamp="1606180925558">
+      <screen x="-1920" y="2" width="1920" height="1080" />
+    </state>
+    <state width="1120" height="714" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606180925558" />
+    <state x="-1459" y="186" key="SettingsEditor" timestamp="1606122969438">
+      <screen x="-1920" y="2" width="1920" height="1080" />
+    </state>
+    <state x="-1459" y="186" key="SettingsEditor/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606122969438" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Classification$train__2_.coverage" NAME="train (2) Coverage Results" MODIFIED="1606135378893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ResNet" />
+    <SUITE FILE_PATH="coverage/Classification$train.coverage" NAME="train Coverage Results" MODIFIED="1606180780996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DenseNet" />
+    <SUITE FILE_PATH="coverage/Classification$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1606124671741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MobileNet" />
+  </component>
+</project>

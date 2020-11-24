@@ -4,12 +4,13 @@
 #  @Date:   2020/11/3 15:29
 #  @File:   train.py
 """
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-import matplotlib.pyplot as plt
 from model import mobilenet
 import tensorflow as tf
-from PIL import Image
-import numpy as np
 import json
 import os
 
@@ -18,11 +19,13 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "3"
 
 im_height = 224
 im_width = 224
+
+data_path = os.path.join(os.getcwd(), "../../")
 classical_path = "./class_indices.json"
-checkpoint_save_path = "./checkpoint/MobileNet.ckpt"
-test_data_path = os.path.abspath(os.getcwd() + "/../DataSet/testdata")
-train_dir = os.path.abspath(os.getcwd() + "/../DataSet/flower_data/train")
-validation_dir = os.path.abspath(os.getcwd() + "/../DataSet/flower_data/val")
+checkpoint_save_path = os.path.join(data_path, "CheckPoint/MobileNet/MobileNet.ckpt")
+test_data_path = os.path.join(data_path, "DataSet/flower_data/testdata")
+train_dir = os.path.join(data_path, "DataSet/flower_data/train")
+validation_dir = os.path.join(data_path, "DataSet/flower_data/val")
 
 print("\n=============================这里是 MobileNet ===========================\n")
 
@@ -53,7 +56,7 @@ print("=============================模型加载中===========================")
 model = mobilenet(num_classes=5)
 model.build((None, 224, 224, 3))
 model.summary()
-# model.build(input_shape) # `input_shape` is the shape of the input data, e.g. input_shape = (None, 32, 32, 3)
+# # model.build(input_shape) # `input_shape` is the shape of the input data, e.g. input_shape = (None, 32, 32, 3)
 model.compile(
     optimizer=tf.keras.optimizers.Adam(learning_rate=0.0001),
     loss=tf.keras.losses.CategoricalCrossentropy(from_logits=False),
@@ -61,7 +64,17 @@ model.compile(
 print("=============================模型加载完毕===========================\n")
 
 print("=============================模型训练中===========================")
-cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_save_path, save_weights_only=True, save_best_only=True)
-model.fit(train_x, train_y, batch_size=32, epochs=450, validation_data=(validation_x, validation_y), callbacks=[cp_callback])
+logdir = "logs/fit/2020-11-23"
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
+cp_callback = tf.keras.callbacks.ModelCheckpoint(
+    filepath=checkpoint_save_path,
+    save_weights_only=True,
+    save_best_only=True)
+model.fit(
+    train_x, train_y,
+    batch_size=32,
+    epochs=450,
+    validation_data=(validation_x, validation_y),
+    callbacks=[cp_callback, tensorboard_callback])
 model.summary()
 print("=============================模型训练完毕===========================\n")

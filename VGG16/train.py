@@ -5,11 +5,8 @@
 #  @File:   train.py
 """
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-import matplotlib.pyplot as plt
 from model import vgg16
 import tensorflow as tf
-from PIL import Image
-import numpy as np
 import json
 import os
 
@@ -18,11 +15,13 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 im_height = 224
 im_width = 224
+
+data_path = os.path.join(os.getcwd(), "../../")
 classical_path = "./class_indices.json"
-checkpoint_save_path = "./checkpoint/VGG16.ckpt"
-test_data_path = os.path.abspath(os.getcwd() + "/../DataSet/testdata")
-train_dir = os.path.abspath(os.getcwd() + "/../DataSet/flower_data/train")
-validation_dir = os.path.abspath(os.getcwd() + "/../DataSet/flower_data/val")
+checkpoint_save_path = os.path.join(data_path, "CheckPoint/VGG16/VGG16.ckpt")
+test_data_path = os.path.join(data_path, "DataSet/flower_data/testdata")
+train_dir = os.path.join(data_path, "DataSet/flower_data/train")
+validation_dir = os.path.join(data_path, "DataSet/flower_data/val")
 
 print("\n=============================这里是 VGG16 ===========================\n")
 
@@ -46,9 +45,6 @@ print("total_val : ", val_data_gen.n)
 
 print("===============================数据加载中===========================")
 train_x, train_y = next(train_data_gen)
-print(train_y)
-print(np.shape(train_y))
-print(type(train_y))
 validation_x, validation_y = next(val_data_gen)
 print("=============================数据加载完毕===========================\n")
 
@@ -64,8 +60,18 @@ model.compile(
 print("=============================模型加载完毕===========================\n")
 
 print("=============================模型训练中===========================")
-cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_save_path, save_weights_only=True, save_best_only=True)
-model.fit(train_x, train_y, batch_size=32, epochs=100, validation_data=(validation_x, validation_y), callbacks=[cp_callback])
+logdir = "logs/fit/2020-11-24"
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
+cp_callback = tf.keras.callbacks.ModelCheckpoint(
+    filepath=checkpoint_save_path,
+    save_weights_only=True,
+    save_best_only=True)
+model.fit(
+    train_x, train_y,
+    batch_size=32,
+    epochs=100,
+    validation_data=(validation_x, validation_y),
+    callbacks=[cp_callback, tensorboard_callback])
 model.summary()
 print("=============================模型训练完毕===========================\n")
 
