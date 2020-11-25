@@ -10,6 +10,20 @@ from tensorflow.keras import layers, Sequential, Model, backend
 
 # DenseNet-B
 class DenseBlock(layers.Layer):
+
+    def __init__(self, growth_rate):
+        super(DenseBlock, self).__init__()
+
+        # ================================================================================================
+        bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+        self.bn1 = layers.BatchNormalization(axis=bn_axis, momentum=0.9, epsilon=1e-5)
+        self.relu1 = layers.Activation('relu')
+        self.conv1 = layers.Conv2D(filters=growth_rate*4, kernel_size=1, strides=1, use_bias=False, name="block_conv_1x1")
+        # ================================================================================================
+        self.bn2 = layers.BatchNormalization(axis=bn_axis, momentum=0.9, epsilon=1e-5)
+        self.relu2 = layers.Activation('relu')
+        self.conv2 = layers.Conv2D(filters=growth_rate, kernel_size=3, strides=1, padding='SAME', use_bias=False, name="block_conv_3x3")
+
     def __init__(self, growth_rate, **kwargs):
         super(DenseBlock, self).__init__(**kwargs)
 
@@ -40,6 +54,19 @@ class DenseBlock(layers.Layer):
 
 # DenseNet-C
 class TransitionLayer(layers.Layer):
+
+    def __init__(self, theta=0.5, growth_rate=12):
+        super(TransitionLayer, self).__init__()
+
+        # ================================================================================================
+        bn_axis = 3 if backend.image_data_format() == 'channels_last' else 1
+        self.bn1 = layers.BatchNormalization(axis=bn_axis, momentum=0.9, epsilon=1e-5)
+        self.relu1 = layers.Activation('relu')
+        self.conv1 = layers.Conv2D(filters=int(growth_rate*theta), kernel_size=1, strides=1, use_bias=False, name="Transit_conv_1x1")
+        self.pool1 = layers.AveragePooling2D(pool_size=2, strides=2, padding='SAME')
+
+    def call(self, inputs):
+
     def __init__(self, theta=0.5, growth_rate=12, **kwargs):
         super(TransitionLayer, self).__init__(**kwargs)
 

@@ -11,7 +11,11 @@ import json
 import os
 
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+<<<<<<< HEAD
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
+=======
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+>>>>>>> Classification/main
 
 im_height = 224
 im_width = 224
@@ -60,8 +64,13 @@ model.compile(
 print("=============================模型加载完毕===========================\n")
 
 print("=============================模型训练中===========================")
+<<<<<<< HEAD
+# logdir = "logs/fit/2020-11-24"
+tensorboard_callback = tf.keras.callbacks.TensorBoard(histogram_freq=1)
+=======
 logdir = "logs/fit/2020-11-24"
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
+>>>>>>> Classification/main
 cp_callback = tf.keras.callbacks.ModelCheckpoint(
     filepath=checkpoint_save_path,
     save_weights_only=True,
@@ -69,7 +78,11 @@ cp_callback = tf.keras.callbacks.ModelCheckpoint(
 model.fit(
     train_x, train_y,
     batch_size=32,
+<<<<<<< HEAD
+    epochs=1000,
+=======
     epochs=300,
+>>>>>>> Classification/main
     validation_data=(validation_x, validation_y),
     callbacks=[cp_callback, tensorboard_callback])
 model.summary()
