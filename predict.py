@@ -6,9 +6,9 @@
 """
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
-from MobileNet.model import mobilenet
-from ResNet.model import resnet50
-from VGG16.model import vgg16
+from MobileNet.MobileNet import mobilenet
+from ResNet.ResNet import resnet50
+from VGG16.VGG16 import vgg16
 import tensorflow as tf
 from PIL import Image
 import numpy as np

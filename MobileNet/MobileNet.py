@@ -2,7 +2,7 @@
 """
 #  @Author: DongHao
 #  @Date:   2020/11/6 13:38
-#  @File:   model.py
+#  @File:   GoogLeNet.py
 # MobileNet V2
 """
 from tensorflow.keras import Model, layers, Sequential, activations

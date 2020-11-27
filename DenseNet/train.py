@@ -5,7 +5,7 @@
 #  @File:   train.py
 """
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from model import denseNet121
+from DenseNet import denseNet121
 import tensorflow as tf
 import json
 import os
@@ -60,8 +60,8 @@ model.compile(
 print("=============================模型加载完毕===========================\n")
 
 print("=============================模型训练中===========================")
-logdir = "logs/fit/2020-11-24"
-tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=logdir)
+# logdir = "logs/fit/2020-11-24"
+tensorboard_callback = tf.keras.callbacks.TensorBoard(histogram_freq=1)
 cp_callback = tf.keras.callbacks.ModelCheckpoint(
     filepath=checkpoint_save_path,
     save_weights_only=True,

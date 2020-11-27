@@ -5,7 +5,7 @@
 #  @File:   train.py
 """
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from model import resnet50
+from ResNet import resnet50
 import tensorflow as tf
 import json
 import os

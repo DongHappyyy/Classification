@@ -5,7 +5,7 @@
 #  @File:   train.py
 """
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from model import vgg16
+from VGG16 import vgg16
 import tensorflow as tf
 import json
 import os

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e42780a2-96f6-4112-b057-1e8de1f5e619" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,15 +29,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/DenseNet" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Documents\PythonProject\DeepLearningFrame\Classification\DenseNet" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.train">
+  <component name="RunManager" selected="Python.train (3)">
     <configuration name="train (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,6 +82,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="train (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Classification" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/GoogLeNet" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/GoogLeNet/train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Classification" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,6 +128,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.train (3)" />
         <item itemvalue="Python.train" />
         <item itemvalue="Python.train (2)" />
         <item itemvalue="Python.train (1)" />
@@ -121,6 +147,8 @@
       <workItem from="1606120056306" duration="17336000" />
       <workItem from="1606266757496" duration="10000" />
       <workItem from="1606270965176" duration="2876000" />
+      <workItem from="1606355931897" duration="30303000" />
+      <workItem from="1606444631088" duration="17631000" />
     </task>
     <servers />
   </component>
@@ -128,38 +156,51 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1334" y="220" key="#Inspections" timestamp="1606123051052">
+    <state x="-1334" y="220" key="#Inspections" timestamp="1606460253044">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
-    <state x="-1334" y="220" key="#Inspections/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606123051052" />
+    <state x="-1334" y="220" key="#Inspections/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606460253044" />
     <state x="-1340" y="342" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606134869400">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
     <state x="-1340" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606134869400" />
-    <state width="1120" height="714" key="GridCell.Tab.0.bottom" timestamp="1606181950000">
+    <state x="-1180" y="296" key="FileChooserDialogImpl" timestamp="1606457268450">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
-    <state width="1120" height="714" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606181950000" />
-    <state width="1120" height="714" key="GridCell.Tab.0.center" timestamp="1606181950000">
+    <state x="-1180" y="296" key="FileChooserDialogImpl/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606457268450" />
+    <state width="1847" height="910" key="GridCell.Tab.0.bottom" timestamp="1606467902179">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
-    <state width="1120" height="714" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606181950000" />
-    <state width="1120" height="714" key="GridCell.Tab.0.left" timestamp="1606181950000">
+    <state width="1847" height="910" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606467902179" />
+    <state width="1847" height="910" key="GridCell.Tab.0.center" timestamp="1606467902179">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
-    <state width="1120" height="714" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606181950000" />
-    <state width="1120" height="714" key="GridCell.Tab.0.right" timestamp="1606181950000">
+    <state width="1847" height="910" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606467902179" />
+    <state width="1847" height="910" key="GridCell.Tab.0.left" timestamp="1606467902179">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
-    <state width="1120" height="714" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606181950000" />
-    <state x="-1459" y="186" key="SettingsEditor" timestamp="1606122969438">
+    <state width="1847" height="910" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606467902179" />
+    <state width="1847" height="910" key="GridCell.Tab.0.right" timestamp="1606467902179">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
-    <state x="-1459" y="186" key="SettingsEditor/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606122969438" />
+    <state width="1847" height="910" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606467902179" />
+    <state x="-1459" y="186" key="SettingsEditor" timestamp="1606457468349">
+      <screen x="-1920" y="2" width="1920" height="1080" />
+    </state>
+    <state x="-1459" y="186" key="SettingsEditor/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606457468349" />
+    <state x="-817" y="108" width="628" height="550" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1606457466202">
+      <screen x="-1920" y="2" width="1920" height="1080" />
+    </state>
+    <state x="-817" y="108" width="628" height="550" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606457466202" />
+    <state x="-1297" y="241" width="672" height="678" key="search.everywhere.popup" timestamp="1606377056380">
+      <screen x="-1920" y="2" width="1920" height="1080" />
+    </state>
+    <state x="-1297" y="241" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606377056380" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Classification$train__2_.coverage" NAME="train (2) Coverage Results" MODIFIED="1606135378893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ResNet" />
-    <SUITE FILE_PATH="coverage/Classification$train.coverage" NAME="train Coverage Results" MODIFIED="1606180780996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DenseNet" />
+    <SUITE FILE_PATH="coverage/Classification$train.coverage" NAME="train Coverage Results" MODIFIED="1606356842917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DenseNet" />
     <SUITE FILE_PATH="coverage/Classification$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1606124671741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MobileNet" />
+    <SUITE FILE_PATH="coverage/Classification$train__3_.coverage" NAME="train (3) Coverage Results" MODIFIED="1606467902170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GoogLeNet" />
   </component>
 </project>

@@ -2,7 +2,7 @@
 """
 #  @Author: DongHao
 #  @Date:   2020/11/17 21:36
-#  @File:   model.py.py
+#  @File:   DenseNet.py
 """
 from tensorflow.keras import layers, Sequential, Model, backend
 # from tensorflow.keras.applications.densenet import DenseNet121        # 官方实现
@@ -10,7 +10,9 @@ from tensorflow.keras import layers, Sequential, Model, backend
 
 # DenseNet-B
 class DenseBlock(layers.Layer):
-
+    """
+家里就快来了
+    """
     def __init__(self, growth_rate):
         super(DenseBlock, self).__init__()
 
@@ -23,18 +25,6 @@ class DenseBlock(layers.Layer):
         self.bn2 = layers.BatchNormalization(axis=bn_axis, momentum=0.9, epsilon=1e-5)
         self.relu2 = layers.Activation('relu')
         self.conv2 = layers.Conv2D(filters=growth_rate, kernel_size=3, strides=1, padding='SAME', use_bias=False, name="block_conv_3x3")
-
-    def __init__(self, growth_rate, **kwargs):
-        super(DenseBlock, self).__init__(**kwargs)
-
-        # ================================================================================================
-        self.bn1 = layers.BatchNormalization(momentum=0.9, epsilon=1e-5)
-        self.relu1 = layers.Activation('relu')
-        self.conv1 = layers.Conv2D(filters=growth_rate*4, kernel_size=1, strides=1, use_bias=False)
-        # ================================================================================================
-        self.bn2 = layers.BatchNormalization(momentum=0.9, epsilon=1e-5)
-        self.relu2 = layers.Activation('relu')
-        self.conv2 = layers.Conv2D(filters=growth_rate, kernel_size=3, strides=1, padding='SAME', use_bias=False)
 
     def call(self, inputs, training=False):
 
@@ -63,17 +53,6 @@ class TransitionLayer(layers.Layer):
         self.bn1 = layers.BatchNormalization(axis=bn_axis, momentum=0.9, epsilon=1e-5)
         self.relu1 = layers.Activation('relu')
         self.conv1 = layers.Conv2D(filters=int(growth_rate*theta), kernel_size=1, strides=1, use_bias=False, name="Transit_conv_1x1")
-        self.pool1 = layers.AveragePooling2D(pool_size=2, strides=2, padding='SAME')
-
-    def call(self, inputs):
-
-    def __init__(self, theta=0.5, growth_rate=12, **kwargs):
-        super(TransitionLayer, self).__init__(**kwargs)
-
-        # ================================================================================================
-        self.bn1 = layers.BatchNormalization(momentum=0.9, epsilon=1e-5)
-        self.relu1 = layers.Activation('relu')
-        self.conv1 = layers.Conv2D(filters=int(growth_rate*theta), kernel_size=1, strides=1, use_bias=False)
         self.pool1 = layers.AveragePooling2D(pool_size=2, strides=2, padding='SAME')
 
     def call(self, inputs, training=False):

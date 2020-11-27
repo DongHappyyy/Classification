@@ -2,7 +2,7 @@
 """
 #  @Author: DongHao
 #  @Date:   2020/10/30 16:25
-#  @File:   model.py
+#  @File:   GoogLeNet.py
 """
 from tensorflow.keras import Model, layers, Sequential
 

@@ -2,7 +2,7 @@
 """
 #  @Author: DongHao
 #  @Date:   2020/11/6 21:41
-#  @File:   model.py
+#  @File:   GoogLeNet.py
 """
 from tensorflow.keras import layers, Model
 

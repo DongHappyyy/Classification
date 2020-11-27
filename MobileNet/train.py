@@ -9,7 +9,7 @@ from __future__ import division
 from __future__ import print_function
 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from model import mobilenet
+from MobileNet import mobilenet
 import tensorflow as tf
 import json
 import os
