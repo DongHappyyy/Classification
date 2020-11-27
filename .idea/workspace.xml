@@ -148,7 +148,7 @@
       <workItem from="1606266757496" duration="10000" />
       <workItem from="1606270965176" duration="2876000" />
       <workItem from="1606355931897" duration="30303000" />
-      <workItem from="1606444631088" duration="17631000" />
+      <workItem from="1606444631088" duration="20917000" />
     </task>
     <servers />
   </component>
@@ -168,22 +168,22 @@
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
     <state x="-1180" y="296" key="FileChooserDialogImpl/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606457268450" />
-    <state width="1847" height="910" key="GridCell.Tab.0.bottom" timestamp="1606467902179">
+    <state width="1847" height="910" key="GridCell.Tab.0.bottom" timestamp="1606471933132">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
-    <state width="1847" height="910" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606467902179" />
-    <state width="1847" height="910" key="GridCell.Tab.0.center" timestamp="1606467902179">
+    <state width="1847" height="910" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606471933132" />
+    <state width="1847" height="910" key="GridCell.Tab.0.center" timestamp="1606471933132">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
-    <state width="1847" height="910" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606467902179" />
-    <state width="1847" height="910" key="GridCell.Tab.0.left" timestamp="1606467902179">
+    <state width="1847" height="910" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606471933132" />
+    <state width="1847" height="910" key="GridCell.Tab.0.left" timestamp="1606471933132">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
-    <state width="1847" height="910" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606467902179" />
-    <state width="1847" height="910" key="GridCell.Tab.0.right" timestamp="1606467902179">
+    <state width="1847" height="910" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606471933132" />
+    <state width="1847" height="910" key="GridCell.Tab.0.right" timestamp="1606471933132">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
-    <state width="1847" height="910" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606467902179" />
+    <state width="1847" height="910" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.2.1920.1080@-1920.2.1920.1080" timestamp="1606471933132" />
     <state x="-1459" y="186" key="SettingsEditor" timestamp="1606457468349">
       <screen x="-1920" y="2" width="1920" height="1080" />
     </state>
@@ -201,6 +201,6 @@
     <SUITE FILE_PATH="coverage/Classification$train__2_.coverage" NAME="train (2) Coverage Results" MODIFIED="1606135378893" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ResNet" />
     <SUITE FILE_PATH="coverage/Classification$train.coverage" NAME="train Coverage Results" MODIFIED="1606356842917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DenseNet" />
     <SUITE FILE_PATH="coverage/Classification$train__1_.coverage" NAME="train (1) Coverage Results" MODIFIED="1606124671741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MobileNet" />
-    <SUITE FILE_PATH="coverage/Classification$train__3_.coverage" NAME="train (3) Coverage Results" MODIFIED="1606467902170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GoogLeNet" />
+    <SUITE FILE_PATH="coverage/Classification$train__3_.coverage" NAME="train (3) Coverage Results" MODIFIED="1606471912977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/GoogLeNet" />
   </component>
 </project>

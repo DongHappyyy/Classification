@@ -50,10 +50,8 @@ print("\n============================================ Here is GoogLeNet ========
 # 定义用到的各种路径和变量
 BATCH_SIZE = 32
 cache = './cache.tf-data-train'
-classical_path = "./class_indices.json"
 data_path = os.path.join(os.getcwd(), "../../")
-model_save_path = os.path.join(data_path, "CheckPoint/GoogLeNet/GoogLeNet")
-test_data_path = os.path.join(data_path, "DataSet/flower_data/testdata")
+model_save_path = os.path.join(data_path, "CheckPoint/GoogLeNet")
 train_dir = os.path.join(data_path, "DataSet/flower_data/train")
 validation_dir = os.path.join(data_path, "DataSet/flower_data/val")
 
@@ -70,7 +68,7 @@ train_labels = [dic[path.split(os.sep)[-2]] for path in train_images_path]
 total_train_images = len(train_images_path)
 train_ds = tf.data.Dataset.from_tensor_slices((train_images_path, train_labels))
 train_ds = train_ds.map(map_func=load_and_preprocess_image, num_parallel_calls=tf.data.experimental.AUTOTUNE)\
-    .cache().shuffle(buffer_size=total_train_images).repeat(1)\
+    .cache().shuffle(buffer_size=total_train_images).repeat()\
     .batch(BATCH_SIZE).prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
 
 # 加载验证集，获取图片路径和标签, 使用并行化预处理num_parallel_calls 和预存数据prefetch来提升性能
@@ -81,7 +79,7 @@ total_validation_images = len(validation_images_path)
 validation_ds = tf.data.Dataset.from_tensor_slices((validation_images_path, validation_labels))\
     .map(map_func=load_and_preprocess_image, num_parallel_calls=tf.data.experimental.AUTOTUNE)\
     .cache().shuffle(buffer_size=total_validation_images)\
-    .repeat(1).batch(BATCH_SIZE).prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
+    .repeat().batch(BATCH_SIZE).prefetch(buffer_size=tf.data.experimental.AUTOTUNE)
 
 print(train_ds)
 print(validation_ds)
@@ -126,14 +124,18 @@ for epoch in range(epochs):
     total_A = total_train_images // BATCH_SIZE
     for index, (train_images, train_labels) in enumerate(train_ds):
         # print(train_images)     # shape=(32, 224, 224, 3)
-        # print(train_labels)     # shape=(32,)
+        # print(train_labels)     # shape=(32, 5)
         train_step(train_images, train_labels)
         print("============= Training :   Total_Step = {},   Current_Step = {} =============\n".format(total_A, index))
+        if index == total_A:
+            break
 
     total_B = total_validation_images // BATCH_SIZE
     for index, (validation_images, validation_labels) in enumerate(validation_ds):
         validation_step(validation_images, validation_labels)
         print("============ Validation :   Total_Step = {},   Current_Step = {} ============\n".format(total_B, index))
+        if index == total_B:
+            break
 
     information = '\nEpoch {}, Loss: {}, Accuracy: {}, Test Loss: {}, Test Accuracy: {}\n'
     print(information.format(epoch + 1, train_loss.result(), train_metric.result() * 100,
@@ -143,6 +145,9 @@ for epoch in range(epochs):
     train_accuracy_results.append(train_metric.result())
 
     if epoch % 30 == 0:
-        model.save(model_save_path+"_"+str(epoch+1), save_format="tf")
+        temp_path = os.path.join(model_save_path, "googlenet_"+str(epoch+1))
+        if not os.path.exists(temp_path):
+            os.makedirs(temp_path)
+        model.save(temp_path)
 
 print("\n============================================ 训练结束，模型已保存 ============================================\n")
