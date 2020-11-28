@@ -147,65 +147,65 @@ class GoogLeNet(Model):
 
     def call(self, inputs, training=False, **kwargs):
         x = self.conv1(inputs)                      # 224x224x3 => 112x112x64
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         x = self.bn1(x, training=training)
         x = self.act1(x)
 
         x = self.maxpool1(x)                        # 112x112x64 => 56x56x64
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
 
         x = self.conv2(x)                           # 56x56x64 => 56x56x64
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         x = self.bn2(x, training=training)
         x = self.act2(x)
 
         x = self.conv3(x)                           # 56x56x64 => 56x56x192
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         x = self.bn3(x, training=training)
         x = self.act3(x)
 
         x = self.maxpool2(x)                        # 56x56x192 => 28x28x192
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
 
         x = self.inception1(x)                      # 28x28x192 => 28x28x256
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         x = self.inception2(x)                      # 28x28x192 => 28x28x480
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
 
         x = self.maxpool3(x)                        # 28x28x480 => 14x14x480
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
 
         x = self.inception3(x)                      # 14x14x480 => 14x14x512
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         auxiliary_classifier_1 = self.auxiliary_classifier1(x)  # => 5
-        print(auxiliary_classifier_1.shape.as_list())
+        # print(auxiliary_classifier_1.shape.as_list())
 
         x = self.inception4(x)                      # 14x14x512 => 14x14x512
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         x = self.inception5(x)                      # 14x14x512 => 14x14x512
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         x = self.inception6(x)                      # 14x14x512 => 14x14x528
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         auxiliary_classifier_2 = self.auxiliary_classifier2(x)  # => 5
-        print(auxiliary_classifier_2.shape.as_list())
+        # print(auxiliary_classifier_2.shape.as_list())
 
         x = self.inception7(x)                      # 14x14x528 => 14x14x832
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
 
         x = self.maxpool4(x)                        # 14x14x832 => 7x7x832
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
 
         x = self.inception8(x)                      # 7x7x832 => 7x7x832
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         x = self.inception9(x)                      # 7x7x832 => 7x7x1024
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
 
         x = self.avepool(x)                         # 7x7x1024 => 1x1x1024
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         x = self.flatten(x)                         # 1x1x1024 => 1024
-        print(x.shape.as_list())
+        # print(x.shape.as_list())
         x = self.drop(x)
         main_classifier = self.dense(x)             # 1024 => 5
-        print(main_classifier.shape.as_list())
+        # print(main_classifier.shape.as_list())
 
         return auxiliary_classifier_1, auxiliary_classifier_2, main_classifier
